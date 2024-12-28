@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Monte Carlo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simulasi Monte Carlo</h1>
+    </header>
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="studi-kasus.html">Studi Kasus</a>
+        <a href=https://colab.research.google.com/drive/1VMyGr6-sMDjxec4vTfTNipwjI0Lq67mv?usp=sharing>Hasil Simulasi</a>
+    </nav>
+    <main id="content">
+        <section id="studi-kasus">
+            <h2>Penjelasan Studi Kasus</h2>
+            <p>Studi kasus yang saya ambil adalah mensimulasikan Metode Monte Carlo untuk memprediksi jumlah kartun animasi Jepang (anime)
+                bergenre fantasi yang akan tayang tahun depan dengan melihat data historis jumlah dari musim-musim sebelumnya.</p>
+            <p>Data historis diperoleh melalui website <a href="https://myanimelist.net" target="_blank">MyAnimeList.net</a>.
+                MyAnimeList (MAL) adalah situs web yang berfungsi sebagai katalog dan jejaring sosial untuk anime dan manga. 
+                Situs ini menyediakan berbagai fitur seperti daftar untuk mengatur dan memberi skor anime dan manga, Database yang besar tentang anime dan manga
+                Fitur forum untuk bersosialisasi, Fitur untuk menulis rekomendasi dan blog, dan Fitur untuk mengirimkan ulasan.
+            </p>
+            <p>
+                adapun data historis yang diperoleh dari 4 musim tahun 2023 adalah sebagai berikut :
+            </p>
+            <ul>
+                <li>Fall    = 79 series</li>
+                <li>Summer  = 85 series</li>
+                <li>spring  = 66 series</li>
+                <li>Winter  = 75 series</li>
+            </ul>
+        </section>
+
+        <section id="hasil-simulasi">
+            <h2>Rumus yang Digunakan</h2>
+            <p>
+                Multiplicative Congruential Generator (MCG) adalah salah satu metode sederhana dan klasik untuk menghasilkan bilangan acak dalam bidang komputasi. Metode ini termasuk dalam keluarga Linear Congruential Generators (LCGs), namun hanya menggunakan operasi perkalian (tanpa penjumlahan) untuk menghasilkan bilangan acak.
+            </p>
+            <h3>Rumus Dasar MCG</h3>
+            <pre>
+X<sub>n+1</sub> = (a &middot; X<sub>n</sub>) mod m
+            </pre>
+            <p>
+                Dimana:
+                <ul>
+                    <li><strong>X<sub>n</sub></strong>: Bilangan acak ke-<em>n</em> yang dihasilkan.</li>
+                    <li><strong>X<sub>n+1</sub></strong>: Bilangan acak berikutnya.</li>
+                    <li><strong>a</strong>: Konstanta pengali (<em>a &gt; 0</em>), disebut <em>multiplier</em>.</li>
+                    <li><strong>m</strong>: Modulus (<em>m &gt; 0</em>), yang menentukan jangkauan nilai bilangan acak.</li>
+                    <li><strong>X<sub>0</sub></strong>: Nilai awal (<em>seed</em>), menentukan urutan bilangan acak.</li>
+                </ul>
+            </p>
+            <p>Bilangan yang dihasilkan akan berada dalam interval [0, m-1].</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 301220029 Raka Gemilang Ferdiana Atmaja</p>
+    </footer>
+</body>
+</html>
